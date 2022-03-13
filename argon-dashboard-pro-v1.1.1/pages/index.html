@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+  <meta name="author" content="Creative Tim">
+  <title>Tableau Embedded Demo Apps</title>
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/img/brand/favicon.png" type="image/png">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <!-- Icons -->
+  <link rel="stylesheet" href="./assets/vendor/nucleo/css/nucleo.css" type="text/css">
+  <link rel="stylesheet" href="./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+  <!-- Argon CSS -->
+  <link rel="stylesheet" href="./assets/css/argon.css?v=1.1.0" type="text/css">
+</head>
+
+
+<body>
+  <!-- Navbar -->
+  <nav
+    style="position: fixed; top: 0; width: 100%; background-image: linear-gradient(to bottom right,#26569A ,#94AACD);"
+    id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
+    <div class="container">
+<a class="navbar-brand">
+  <img style="height: 35px; width: 35px;"
+    src="./assets/Tableau_Logo_Mark.svg" class="navbar-brand-img" height="auto" width="100%">
+</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse"
+        aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse navbar-custom-collapse collapse" id="navbar-collapse">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a href="#">
+                <img src="./assets/tableau_sign_in_logo.svg">
+              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse"
+                aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <ul class="navbar-nav mr-auto">
+          <!-- <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+          </svg> -->
+          <li class="nav-item">
+            <a href="https://tableau.github.io/embedding-playbook/" target="_blank" rel="noopener noreferrer" class="nav-link">
+              <span class="nav-link-inner--text">Embedding Playbook</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <span class="nav-link-inner--text">SSO</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Single Sign-On Authentication</h6>
+              </div>
+              <a href="https://help.tableau.com/current/online/en-us/connected_apps.htm" target="_blank"
+                rel="noopener noreferrer" class="dropdown-item">
+                <span>Connected Apps</span>
+              </a>
+              <a href="https://help.tableau.com/current/server/en-us/connected_apps_eas.htm" target="_blank"
+                rel="noopener noreferrer" class="dropdown-item">
+                <span>External Authorization Server (EAS)</span>
+              </a>
+              <a href="https://help.tableau.com/current/server/en-us/trusted_auth.htm" target="_blank"
+                rel="noopener noreferrer" class="dropdown-item">
+                <span>Trusted Authentication</span>
+              </a>
+              <a href="https://help.tableau.com/current/server/en-us/saml.htm" target="_blank" rel="noopener noreferrer"
+                class="dropdown-item">
+                <span>SAML</span>
+              </a>
+              <a href="https://help.tableau.com/current/server/en-us/openid_auth.htm" target="_blank"
+                rel="noopener noreferrer" class="dropdown-item">
+                <span>OpenID Connect</span>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <span class="nav-link-inner--text">APIs</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Integration APIs</h6>
+              </div>
+              <a href="https://help.tableau.com/current/online/en-us/connected_apps.htm" target="_blank"
+                rel="noopener noreferrer" class="dropdown-item">
+                <span>JavaScript API</span>
+              </a>
+              <a href="https://help.tableau.com/current/online/en-us/connected_apps.htm" target="_blank"
+                rel="noopener noreferrer" class="dropdown-item">
+                <span>REST API</span>
+              </a>
+              <a href="https://help.tableau.com/current/server/en-us/connected_apps_eas.htm" target="_blank"
+                rel="noopener noreferrer" class="dropdown-item">
+                <span>Metadata API</span>
+              </a>
+              <a href="https://help.tableau.com/current/server/en-us/trusted_auth.htm" target="_blank"
+                rel="noopener noreferrer" class="dropdown-item">
+                <span>Hyper API</span>
+              </a>
+              <a href="https://help.tableau.com/current/server/en-us/saml.htm" target="_blank" rel="noopener noreferrer"
+                class="dropdown-item">
+                <span>Document API</span>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <span class="nav-link-inner--text">Data Security</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Integration APIs</h6>
+              </div>
+              <a href="https://help.tableau.com/current/online/en-us/connected_apps.htm" target="_blank"
+                rel="noopener noreferrer" class="dropdown-item">
+                <span>JavaScript API</span>
+              </a>
+              <a href="https://help.tableau.com/current/online/en-us/connected_apps.htm" target="_blank"
+                rel="noopener noreferrer" class="dropdown-item">
+                <span>REST API</span>
+              </a>
+              <a href="https://help.tableau.com/current/server/en-us/connected_apps_eas.htm" target="_blank"
+                rel="noopener noreferrer" class="dropdown-item">
+                <span>Metadata API</span>
+              </a>
+              <a href="https://help.tableau.com/current/server/en-us/trusted_auth.htm" target="_blank"
+                rel="noopener noreferrer" class="dropdown-item">
+                <span>Hyper API</span>
+              </a>
+              <a href="https://help.tableau.com/current/server/en-us/saml.htm" target="_blank" rel="noopener noreferrer"
+                class="dropdown-item">
+                <span>Document API</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <!-- Header -->
+    <div class="header py-7 py-lg-8 pt-lg-9">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
+              <div style="padding: 10px;">
+                <img class="card-img-top"
+                  src="./assets/tableau-app-retail.png"
+                  alt="Card image cap">
+                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
+                  <i class="fas fa-tags"></i>
+                </div>
+                <span class="badge badge-secondary" style="color: #26569A;">English</span>
+                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
+                <div class="card-body">
+                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
+                    ranging from executive overviews to point-of-sale metrics
+                  </p>
+                  <div style="text-align: center;">
+                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
+                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
+                        Launch Demo</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
+              <div style="padding: 10px;">
+                <img class="card-img-top"
+                  src="./assets/tableau-app-retail.png"
+                  alt="Card image cap">
+                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
+                  <i class="fas fa-tags"></i>
+                </div>
+                <span class="badge badge-secondary" style="color: #26569A;">English</span>
+                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
+                <div class="card-body">
+                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
+                    ranging from executive overviews to point-of-sale metrics
+                  </p>
+                  <div style="text-align: center;">
+                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
+                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
+                        Launch Demo</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
+              <div style="padding: 10px;">
+                <img class="card-img-top"
+                  src="./assets/tableau-app-retail.png"
+                  alt="Card image cap">
+                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
+                  <i class="fas fa-tags"></i>
+                </div>
+                <span class="badge badge-secondary" style="color: #26569A;">English</span>
+                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
+                <div class="card-body">
+                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
+                    ranging from executive overviews to point-of-sale metrics
+                  </p>
+                  <div style="text-align: center;">
+                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
+                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
+                        Launch Demo</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
+              <div style="padding: 10px;">
+                <img class="card-img-top"
+                  src="./assets/tableau-app-retail.png"
+                  alt="Card image cap">
+                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
+                  <i class="fas fa-tags"></i>
+                </div>
+                <span class="badge badge-secondary" style="color: #26569A;">English</span>
+                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
+                <div class="card-body">
+                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
+                    ranging from executive overviews to point-of-sale metrics
+                  </p>
+                  <div style="text-align: center;">
+                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
+                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
+                        Launch Demo</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
+              <div style="padding: 10px;">
+                <img class="card-img-top"
+                  src="./assets/tableau-app-retail.png"
+                  alt="Card image cap">
+                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
+                  <i class="fas fa-tags"></i>
+                </div>
+                <span class="badge badge-secondary" style="color: #26569A;">English</span>
+                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
+                <div class="card-body">
+                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
+                    ranging from executive overviews to point-of-sale metrics
+                  </p>
+                  <div style="text-align: center;">
+                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
+                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
+                        Launch Demo</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
+              <div style="padding: 10px;">
+                <img class="card-img-top"
+                  src="./assets/tableau-app-retail.png"
+                  alt="Card image cap">
+                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
+                  <i class="fas fa-tags"></i>
+                </div>
+                <span class="badge badge-secondary" style="color: #26569A;">English</span>
+                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
+                <div class="card-body">
+                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
+                    ranging from executive overviews to point-of-sale metrics
+                  </p>
+                  <div style="text-align: center;">
+                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
+                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
+                        Launch Demo</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
+              <div style="padding: 10px;">
+                <img class="card-img-top"
+                  src="./assets/tableau-app-retail.png"
+                  alt="Card image cap">
+                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
+                  <i class="fas fa-tags"></i>
+                </div>
+                <span class="badge badge-secondary" style="color: #26569A;">English</span>
+                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
+                <div class="card-body">
+                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
+                    ranging from executive overviews to point-of-sale metrics
+                  </p>
+                  <div style="text-align: center;">
+                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
+                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
+                        Launch Demo</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
+              <div style="padding: 10px;">
+                <img class="card-img-top"
+                  src="./assets/tableau-app-retail.png"
+                  alt="Card image cap">
+                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
+                  <i class="fas fa-tags"></i>
+                </div>
+                <span class="badge badge-secondary" style="color: #26569A;">English</span>
+                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
+                <div class="card-body">
+                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
+                    ranging from executive overviews to point-of-sale metrics
+                  </p>
+                  <div style="text-align: center;">
+                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
+                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
+                        Launch Demo</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
+              <div style="padding: 10px;">
+                <img class="card-img-top"
+                  src="./assets/tableau-app-retail.png"
+                  alt="Card image cap">
+                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
+                  <i class="fas fa-tags"></i>
+                </div>
+                <span class="badge badge-secondary" style="color: #26569A;">English</span>
+                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
+                <div class="card-body">
+                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
+                    ranging from executive overviews to point-of-sale metrics
+                  </p>
+                  <div style="text-align: center;">
+                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
+                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
+                        Launch Demo</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
+              <div style="padding: 10px;">
+                <img class="card-img-top"
+                  src="./assets/tableau-app-retail.png"
+                  alt="Card image cap">
+                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
+                  <i class="fas fa-tags"></i>
+                </div>
+                <span class="badge badge-secondary" style="color: #26569A;">English</span>
+                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
+                <div class="card-body">
+                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
+                    ranging from executive overviews to point-of-sale metrics
+                  </p>
+                  <div style="text-align: center;">
+                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
+                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
+                        Launch Demo</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
+              <div style="padding: 10px;">
+                <img class="card-img-top"
+                  src="./assets/tableau-app-retail.png"
+                  alt="Card image cap">
+                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
+                  <i class="fas fa-tags"></i>
+                </div>
+                <span class="badge badge-secondary" style="color: #26569A;">English</span>
+                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
+                <div class="card-body">
+                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
+                    ranging from executive overviews to point-of-sale metrics
+                  </p>
+                  <div style="text-align: center;">
+                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
+                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
+                        Launch Demo</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
+              <div style="padding: 10px;">
+                <img class="card-img-top"
+                  src="./assets/tableau-app-retail.png"
+                  alt="Card image cap">
+                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
+                  <i class="fas fa-tags"></i>
+                </div>
+                <span class="badge badge-secondary" style="color: #26569A;">English</span>
+                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
+                <div class="card-body">
+                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
+                    ranging from executive overviews to point-of-sale metrics
+                  </p>
+                  <div style="text-align: center;">
+                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
+                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
+                        Launch Demo</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Argon Scripts -->
+  <!-- Core -->
+  <script src="./assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="./assets/vendor/js-cookie/js.cookie.js"></script> -->
+  <!-- <script src="./assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+  <script src="./assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script> -->
+  <!-- Argon JS -->
+  <script src="./assets/js/argon.js?v=1.1.0"></script>
+  <!-- Demo JS - remove this in your project -->
+  <!-- <script src="./assets/js/demo.min.js"></script> -->
+</body>
+
+</html>
