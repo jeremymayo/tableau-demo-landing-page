@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
   <!-- Argon CSS -->
   <link rel="stylesheet" href="./assets/css/argon.css?v=1.1.0" type="text/css">
+  
 </head>
 
 
@@ -63,7 +64,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-              <span class="nav-link-inner--text">SSO</span>
+              <span class="nav-link-inner--text">SSO &gt;</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-header noti-title">
@@ -94,66 +95,111 @@
           <li class="nav-item dropdown">
             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-              <span class="nav-link-inner--text">APIs</span>
+              <span class="nav-link-inner--text">APIs &gt;</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-header noti-title">
                 <h6 class="text-overflow m-0">Integration APIs</h6>
               </div>
-              <a href="https://help.tableau.com/current/online/en-us/connected_apps.htm" target="_blank"
+              <a href="https://help.tableau.com/current/api/js_api/en-us/JavaScriptAPI/js_api.htm" target="_blank"
                 rel="noopener noreferrer" class="dropdown-item">
                 <span>JavaScript API</span>
               </a>
-              <a href="https://help.tableau.com/current/online/en-us/connected_apps.htm" target="_blank"
+              <a href="https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api.htm" target="_blank"
                 rel="noopener noreferrer" class="dropdown-item">
                 <span>REST API</span>
               </a>
-              <a href="https://help.tableau.com/current/server/en-us/connected_apps_eas.htm" target="_blank"
+              <a href="https://help.tableau.com/current/api/metadata_api/en-us/index.html" target="_blank"
                 rel="noopener noreferrer" class="dropdown-item">
                 <span>Metadata API</span>
               </a>
-              <a href="https://help.tableau.com/current/server/en-us/trusted_auth.htm" target="_blank"
+              <a href="https://help.tableau.com/current/api/hyper_api/en-us/index.html" target="_blank"
                 rel="noopener noreferrer" class="dropdown-item">
                 <span>Hyper API</span>
               </a>
-              <a href="https://help.tableau.com/current/server/en-us/saml.htm" target="_blank" rel="noopener noreferrer"
+              <a href="http://tableau.github.io/document-api-python/#" target="_blank" rel="noopener noreferrer"
                 class="dropdown-item">
                 <span>Document API</span>
               </a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Library Repos</h6>
+              </div>
+              <a href="https://tableau.github.io/server-client-python/" target="_blank" rel="noopener noreferrer" class="dropdown-item">
+                <span>Tableau Server Client (Python)</span></a>
+            
             </div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-              <span class="nav-link-inner--text">Data Security</span>
+              <span class="nav-link-inner--text">Security &gt;</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-header noti-title">
-                <h6 class="text-overflow m-0">Integration APIs</h6>
+                <h6 class="text-overflow m-0">Data Security (RLS)</h6>
               </div>
-              <a href="https://help.tableau.com/current/online/en-us/connected_apps.htm" target="_blank"
+              <a href="https://www.tableau.com/learn/whitepapers/row-level-security-entitlements-tables" target="_blank"
                 rel="noopener noreferrer" class="dropdown-item">
-                <span>JavaScript API</span>
+                <span>Row-level Security (Whitepaper)</span>
               </a>
-              <a href="https://help.tableau.com/current/online/en-us/connected_apps.htm" target="_blank"
+              <a href="https://tableauandbehold.com/2020/12/09/quick-explanation-of-row-level-security-in-tableau/" target="_blank"
+              rel="noopener noreferrer" class="dropdown-item">
+              <span>RLS (Abridged Blog Post)</span>
+              </a>
+              <a href="https://help.tableau.com/current/server/en-us/rls_bestpractices.htm" target="_blank"
                 rel="noopener noreferrer" class="dropdown-item">
-                <span>REST API</span>
+                <span>RLS Best Practices</span>
               </a>
-              <a href="https://help.tableau.com/current/server/en-us/connected_apps_eas.htm" target="_blank"
+              <a href="https://github.com/jrunrun/tableau-row-level-security-demo" target="_blank"
                 rel="noopener noreferrer" class="dropdown-item">
-                <span>Metadata API</span>
+                <span>RLS (Demo App)</span>
               </a>
-              <a href="https://help.tableau.com/current/server/en-us/trusted_auth.htm" target="_blank"
+              <a href="https://help.tableau.com/current/server/en-us/rls_datasource.htm" target="_blank"
                 rel="noopener noreferrer" class="dropdown-item">
-                <span>Hyper API</span>
+                <span>Leveraging RLS in Your Database</span>
               </a>
-              <a href="https://help.tableau.com/current/server/en-us/saml.htm" target="_blank" rel="noopener noreferrer"
-                class="dropdown-item">
-                <span>Document API</span>
-              </a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Network Security</h6>
+              </div>
+              <a href="https://help.tableau.com/current/server/en-us/security_harden.htm" target="_blank" rel="noopener noreferrer" class="dropdown-item">
+                <span>Security Hardening Checklist</span></a>
+              <a href="https://help.tableau.com/current/server/en-us/ssl_config.htm" target="_blank" rel="noopener noreferrer" class="dropdown-item">
+                <span>Configuring SSL for Tableau</span></a>
+              <a href="https://help.tableau.com/current/server/en-us/clickjack_protection.htm" target="_blank" rel="noopener noreferrer" class="dropdown-item">
+                <span>Clickjack Protection</span></a>
             </div>
           </li>
-        </ul>
+          <li class="nav-item dropdown">
+            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <span class="nav-link-inner--text">Additional Resources &gt;</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Architecture</h6>
+              </div>
+              <a href="https://www.tableau.com/learn/whitepapers/hardware-planning-and-server-configuration-enterprise-tableau-deployments" target="_blank"
+                rel="noopener noreferrer" class="dropdown-item">
+                <span>Hardware Deployment Guide (Whitepaper)</span>
+              </a>
+              <a href=" " target="_blank"
+                rel="noopener noreferrer" class="dropdown-item">
+                <span>Enterprise Deployment Guide (TBA)</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Deployment</h6>
+              </div>
+              <a href="https://help.tableau.com/current/server/en-us/cmt-intro.htm" target="_blank" rel="noopener noreferrer" class="dropdown-item">
+              <span>Tableau Content Migration Tool (CMT)</span></a>
+              <a href="https://tableauandbehold.com/2017/03/07/developing-and-deploying-tableau-content/" target="_blank" rel="noopener noreferrer" class="dropdown-item">
+                <span>Developing And Deploying Tableau Content</span></a>
+            </div>
+          </li>  
+    </div>
+          </li>
       </div>
     </div>
   </nav>
