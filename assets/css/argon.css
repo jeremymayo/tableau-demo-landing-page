@@ -5449,7 +5449,7 @@ input[type='button'].btn-block
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link
 {
-    color: #525f7f;
+    color: white;
     border-color: #dee2e6 #dee2e6 #f8f9fe; 
     background-color: #f8f9fe;
 }
@@ -23057,11 +23057,11 @@ textarea[resize='horizontal']
 
 .nav-link
 {
-    color: #525f7f;
+    color: white;
 }
 .nav-link:hover
 {
-    color: #5e72e4;
+    color: #bbb;
 }
 .nav-link i.ni
 {
