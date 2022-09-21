@@ -26,3 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+document.getElementById('myFilter').addEventListener('keyup', (evt) => {
+  const searchText = evt.target.value.toLowerCase();
+  shuffleInstance.filter(element => {
+      console.log('filtering...');
+      const tags = element.getAttribute('data-groups');
+      console.log("tags: " + tags);
+      return tags.indexOf(searchText) !== -1;
+  });
+
+});
