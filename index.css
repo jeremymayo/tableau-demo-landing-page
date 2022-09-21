@@ -8,7 +8,7 @@
 }
 
 @media only screen and (max-width: 1400px){
-  #searchBoxDiv {margin-left: 0px; max-width: fit-content;}
+  #searchBoxDiv {margin-left: 0px;}
 }
 
 html, body, div, img {
@@ -83,6 +83,9 @@ body {
 
 }
 
+.searchForm input {
+    width: 200px;
+  }
 
 
 /* .navbar-nav > li > .dropdown-menu > .hover { background-color: #FF0000; } */
