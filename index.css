@@ -8,7 +8,7 @@
 }
 
 @media only screen and (max-width: 1400px){
-  #searchBoxDiv {margin-left: 0px;}
+  #searchBoxDiv {margin-left: 0px; max-width: fit-content;}
 }
 
 html, body, div, img {
