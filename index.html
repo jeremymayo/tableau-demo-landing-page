@@ -1,481 +1,398 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
-  <meta name="author" content="Creative Tim">
-  <title>Tableau Embedded Demos</title>
-  <!-- Favicon -->
-  <link rel="icon" href="./assets/img/brand/favicon.png" type="image/png">
-  <!-- Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-  <!-- Icons -->
-  <link rel="stylesheet" href="./assets/vendor/nucleo/css/nucleo.css" type="text/css">
-  <link rel="stylesheet" href="./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
-  <!-- Argon CSS -->
-  <link rel="stylesheet" href="./assets/css/argon.css?v=1.1.0" type="text/css">
-</head>
-
-
-<body>
-  <!-- Navbar -->
-  <nav
-    style="position: fixed; top: 0; width: 100%; background-image: linear-gradient(to bottom right,#26569A ,#94AACD);"
-    id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
-    <div class="container">
-<a class="navbar-brand">
-  <img style="height: 35px; width: 35px;"
-    src="./assets/Tableau_Logo_Mark.svg" class="navbar-brand-img" height="auto" width="100%">
-</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse"
-        aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse navbar-custom-collapse collapse" id="navbar-collapse">
-        <div class="navbar-collapse-header">
-          <div class="row">
-            <div class="col-6 collapse-brand">
-              <a href="#">
-                <img src="./assets/tableau_sign_in_logo.svg">
+    <head>
+        <title>Tableau Embedded Analytics</title>
+        <link rel="stylesheet" href="./index.css">
+        <!-- CUSTOMIZED BOOTSTRAP:  Leveraged sass to customize bootstrap v5.1.3
+          sass scss/bootstrap/main.scss:css/main.css
+          sass ./main.scss:./css/main.css -->
+        <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+        <script src="https://kit.fontawesome.com/c20285b819.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+        <link rel="icon" href="./assets/tableau/tableau_favicon.png" type="image/png">
+    </head>
+    <body style="padding-top: 100px;">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" style="z-index: 1; background-image: linear-gradient(to bottom right,#26569A ,#94AACD);">
+        <div class="container">
+          <a class="navbar-brand" href="#" style="font-family: 'Open Sans', sans-serif;">
+            <img style="height: 35px; width: 35px;"
+            src="./assets/tableau/Tableau_Logo_Mark.svg" class="navbar-brand-img" height="auto" width="100%">
+            Tableau Embedded Analytics
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false" style="font-family: 'Open Sans', sans-serif;">
+                      Authentication
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                  <div class="dropdown-header noti-title">
+                    <h6 class="text-overflow m-0" style="font-family: 'Open Sans', sans-serif;">Single Sign-On</h6>
+                  </div>
+                      <a href="https://help.tableau.com/current/online/en-us/connected_apps.htm" target="_blank"
+                          rel="noopener noreferrer" class="dropdown-item">
+                          <span style="font-family: 'Open Sans', sans-serif;">Connected Apps</span>
+                      </a>
+                      <a href="https://help.tableau.com/current/server/en-us/connected_apps_eas.htm" target="_blank"
+                          rel="noopener noreferrer" class="dropdown-item">
+                          <span style="font-family: 'Open Sans', sans-serif;">External Authorization Server (EAS)</span>
+                      </a>
+                      
+                      <a href="https://help.tableau.com/current/server/en-us/saml.htm" target="_blank"
+                          rel="noopener noreferrer" class="dropdown-item">
+                          <span style="font-family: 'Open Sans', sans-serif;">SAML</span>
+                      </a>
+                      <a href="https://help.tableau.com/current/server/en-us/openid_auth.htm" target="_blank"
+                          rel="noopener noreferrer" class="dropdown-item">
+                          <span style="font-family: 'Open Sans', sans-serif;">OpenID Connect</span>
+                      </a>
+                      <div class="dropdown-divider"></div>
+                      <div class="dropdown-header noti-title">
+                        <h6 class="text-overflow m-0" style="font-family: 'Open Sans', sans-serif;">Legacy</h6>
+                      </div>
+                      
+                      <a href="https://help.tableau.com/current/server/en-us/trusted_auth.htm" target="_blank"
+                                                rel="noopener noreferrer" class="dropdown-item">
+                                                <span style="font-family: 'Open Sans', sans-serif;">Trusted Authentication</span>
+                                            </a>
+                  </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false" style="font-family: 'Open Sans', sans-serif;">
+                    APIs
+                </a>
+                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <!-- <li><hr class="dropdown-divider"></li>
+                <div class="dropdown-header noti-title">
+                  <h6 class="text-overflow m-0">Single Sign-On Authentication</h6>
+                </div> -->
+                <div class="dropdown-header noti-title">
+                    <h6 class="text-overflow m-0" style="font-family: 'Open Sans', sans-serif;">APIs</h6>
+                  </div>
+                <a href="https://help.tableau.com/current/api/embedding_api/en-us/index.html" target="_blank"
+                rel="noopener noreferrer" class="dropdown-item">
+                <span style="font-family: 'Open Sans', sans-serif;">Embedding API v3</span>
               </a>
-            </div>
-            <div class="col-6 collapse-close">
-              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse"
-                aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-              </button>
-            </div>
+              <a href="https://help.tableau.com/current/api/rest_api/en-us/REST/rest_api.htm" target="_blank"
+                rel="noopener noreferrer" class="dropdown-item">
+                <span style="font-family: 'Open Sans', sans-serif;">REST API</span>
+              </a>
+              <a href="https://help.tableau.com/current/api/metadata_api/en-us/index.html" target="_blank"
+                rel="noopener noreferrer" class="dropdown-item">
+                <span style="font-family: 'Open Sans', sans-serif;">Metadata API</span>
+              </a>
+              <a href="https://help.tableau.com/current/api/hyper_api/en-us/index.html" target="_blank"
+                rel="noopener noreferrer" class="dropdown-item">
+                <span style="font-family: 'Open Sans', sans-serif;">Hyper API</span>
+              </a>
+              <a href="http://tableau.github.io/document-api-python/#" target="_blank" rel="noopener noreferrer"
+                class="dropdown-item">
+                <span style="font-family: 'Open Sans', sans-serif;">Document API</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header noti-title">
+                <h6 class="text-overflow m-0" h6 class="text-overflow m-0" style="font-family: 'Open Sans', sans-serif;">Libraries</h6>
+              </div>
+              <a href="https://tableau.github.io/server-client-python/" target="_blank" rel="noopener noreferrer" class="dropdown-item">
+                <span style="font-family: 'Open Sans', sans-serif;">Tableau Server Client (Python)</span></a>
+                <div class="dropdown-divider"></div>
+              <div class="dropdown-header noti-title">
+                <h6 class="text-overflow m-0" h6 class="text-overflow m-0" style="font-family: 'Open Sans', sans-serif;">Legacy</h6>
+              </div>
+                <a href="https://help.tableau.com/current/api/js_api/en-us/JavaScriptAPI/js_api.htm" target="_blank"
+                rel="noopener noreferrer" class="dropdown-item">
+                <span style="font-family: 'Open Sans', sans-serif;">JavaScript API v2</span>
+              </a>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false" style="font-family: 'Open Sans', sans-serif;">
+                    Security
+                </a>
+                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <!-- <li><hr class="dropdown-divider"></li>
+                <div class="dropdown-header noti-title">
+                  <h6 class="text-overflow m-0">Single Sign-On Authentication</h6>
+                </div> -->
+                <div class="dropdown-header noti-title">
+                    <h6 class="text-overflow m-0" style="font-family: 'Open Sans', sans-serif;">Data Security (RLS)</h6>
+                  </div>
+                  
+                  <a href="https://github.com/jrunrun/tableau-row-level-security-demo/blob/main/rls-example/docs/overview-of-RLS.pdf" target="_blank"
+                  rel="noopener noreferrer" class="dropdown-item">
+                  <span style="font-family: 'Open Sans', sans-serif;">Row-level Security Overview</span>
+                  </a>
+                  <a href="https://help.tableau.com/current/server/en-us/rls_bestpractices.htm" target="_blank"
+                    rel="noopener noreferrer" class="dropdown-item">
+                    <span style="font-family: 'Open Sans', sans-serif;">Row-level Security Best Practices</span>
+                  </a>
+                  <a href="https://www.tableau.com/learn/whitepapers/row-level-security-entitlements-tables" target="_blank"
+                    rel="noopener noreferrer" class="dropdown-item">
+                    <span style="font-family: 'Open Sans', sans-serif;">Row-level Security Whitepaper</span>
+                  </a>
+                  <a href="https://github.com/jrunrun/tableau-row-level-security-demo" target="_blank"
+                    rel="noopener noreferrer" class="dropdown-item">
+                    <span style="font-family: 'Open Sans', sans-serif;">Row-level Security Dockerized Demo</span>
+                  </a>
+                  <a href="https://help.tableau.com/current/server/en-us/rls_datasource.htm" target="_blank"
+                    rel="noopener noreferrer" class="dropdown-item">
+                    <span style="font-family: 'Open Sans', sans-serif;">Row-Level Security in the Database</span>
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-header noti-title">
+                    <h6 class="text-overflow m-0 h6 class="text-overflow m-0" style="font-family: 'Open Sans', sans-serif;"">Network Security</h6>
+                  </div>
+                  <a href="https://help.tableau.com/current/server/en-us/security_harden.htm" target="_blank" rel="noopener noreferrer" class="dropdown-item">
+                    <span style="font-family: 'Open Sans', sans-serif;">Security Hardening Checklist</span></a>
+                  <a href="https://help.tableau.com/current/server/en-us/ssl_config.htm" target="_blank" rel="noopener noreferrer" class="dropdown-item">
+                    <span style="font-family: 'Open Sans', sans-serif;">Configuring SSL for Tableau</span></a>
+                  <a href="https://help.tableau.com/current/server/en-us/clickjack_protection.htm" target="_blank" rel="noopener noreferrer" class="dropdown-item">
+                    <span style="font-family: 'Open Sans', sans-serif;">Clickjack Protection</span></a>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false" style="font-family: 'Open Sans', sans-serif;">
+                  Hands-On
+              </a>
+              <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <a href="https://developer.salesforce.com/tools/tableau/embedding-playground" target="_blank" rel="noopener noreferrer" class="dropdown-item">
+                    <span style="font-family: 'Open Sans', sans-serif;">Tableau Embedding Playground</span></a>
+                    <a href="https://github.com/tableau/tableau-postman" target="_blank"
+                      rel="noopener noreferrer" class="dropdown-item">
+                      <span style="font-family: 'Open Sans', sans-serif;">Tableau REST API Postman Collection</span>
+                    </a>
+                    <a href="https://github.com/API-Guild/TC23-embed-portal/tree/main" target="_blank"
+                      rel="noopener noreferrer" class="dropdown-item">
+                      <span style="font-family: 'Open Sans', sans-serif;">Embedded Hands-On Course</span>
+                    </a>
+              </ul>
+          </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false" style="font-family: 'Open Sans', sans-serif;">
+                    Additional Resources
+                </a>
+                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <div class="dropdown-header noti-title">
+                        <h6 class="text-overflow m-0" style="font-family: 'Open Sans', sans-serif;">Playbook</h6>
+                      </div>
+                      <a href="https://tableau.github.io/embedding-playbook/" target="_blank" rel="noopener noreferrer" class="dropdown-item">
+                      <span style="font-family: 'Open Sans', sans-serif;">Tableau Embedded Analytics Playbook</span></a>
+                      <div class="dropdown-divider"></div>
+                    <div class="dropdown-header noti-title">
+                        <h6 class="text-overflow m-0" style="font-family: 'Open Sans', sans-serif;">Architecture</h6>
+                      </div>
+                      <a href="https://www.tableau.com/learn/whitepapers/hardware-planning-and-server-configuration-enterprise-tableau-deployments" target="_blank"
+                        rel="noopener noreferrer" class="dropdown-item">
+                        <span style="font-family: 'Open Sans', sans-serif;">Hardware Deployment Guide Whitepaper</span>
+                      </a>
+                      <a href="https://help.tableau.com/current/guides/enterprise-deployment/en-us/edg_intro.htm" target="_blank"
+                        rel="noopener noreferrer" class="dropdown-item">
+                        <span style="font-family: 'Open Sans', sans-serif;">Enterprise Deployment Guide</span>
+                      </a>
+                      <div class="dropdown-divider"></div>
+                      <div class="dropdown-header noti-title">
+                        <h6 class="text-overflow m-0" style="font-family: 'Open Sans', sans-serif;">Deployment</h6>
+                      </div>
+                      <a href="https://help.tableau.com/current/server/en-us/cmt-intro.htm" target="_blank" rel="noopener noreferrer" class="dropdown-item">
+                      <span style="font-family: 'Open Sans', sans-serif;">Tableau Content Migration Tool (CMT)</span></a>
+                      <a href="https://tableauandbehold.com/2017/03/07/developing-and-deploying-tableau-content/" target="_blank" rel="noopener noreferrer" class="dropdown-item">
+                        <span style="font-family: 'Open Sans', sans-serif;">Developing And Deploying Tableau Content</span></a>
+          
+                </ul>
+            </li>
+            
+            <li id="searchBoxDiv" class="nav-item dropdown">
+              <form class="form-inline align-items-end searchForm">
+                <input id="myFilter"  class="form-control mr-sm-2" type="search" placeholder="Search tags..." aria-label="Search">
+              </form>
+            </li>
+            </ul>
           </div>
         </div>
-
-        <ul class="navbar-nav mr-auto">
-          <!-- <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
-          </svg> -->
-          <li class="nav-item">
-            <a href="https://tableau.github.io/embedding-playbook/" target="_blank" rel="noopener noreferrer" class="nav-link">
-              <span class="nav-link-inner--text">Embedding Playbook</span>
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              <span class="nav-link-inner--text">SSO</span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right">
-              <div class="dropdown-header noti-title">
-                <h6 class="text-overflow m-0">Single Sign-On Authentication</h6>
-              </div>
-              <a href="https://help.tableau.com/current/online/en-us/connected_apps.htm" target="_blank"
-                rel="noopener noreferrer" class="dropdown-item">
-                <span>Connected Apps</span>
-              </a>
-              <a href="https://help.tableau.com/current/server/en-us/connected_apps_eas.htm" target="_blank"
-                rel="noopener noreferrer" class="dropdown-item">
-                <span>External Authorization Server (EAS)</span>
-              </a>
-              <a href="https://help.tableau.com/current/server/en-us/trusted_auth.htm" target="_blank"
-                rel="noopener noreferrer" class="dropdown-item">
-                <span>Trusted Authentication</span>
-              </a>
-              <a href="https://help.tableau.com/current/server/en-us/saml.htm" target="_blank" rel="noopener noreferrer"
-                class="dropdown-item">
-                <span>SAML</span>
-              </a>
-              <a href="https://help.tableau.com/current/server/en-us/openid_auth.htm" target="_blank"
-                rel="noopener noreferrer" class="dropdown-item">
-                <span>OpenID Connect</span>
-              </a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              <span class="nav-link-inner--text">APIs</span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right">
-              <div class="dropdown-header noti-title">
-                <h6 class="text-overflow m-0">Integration APIs</h6>
-              </div>
-              <a href="https://help.tableau.com/current/online/en-us/connected_apps.htm" target="_blank"
-                rel="noopener noreferrer" class="dropdown-item">
-                <span>JavaScript API</span>
-              </a>
-              <a href="https://help.tableau.com/current/online/en-us/connected_apps.htm" target="_blank"
-                rel="noopener noreferrer" class="dropdown-item">
-                <span>REST API</span>
-              </a>
-              <a href="https://help.tableau.com/current/server/en-us/connected_apps_eas.htm" target="_blank"
-                rel="noopener noreferrer" class="dropdown-item">
-                <span>Metadata API</span>
-              </a>
-              <a href="https://help.tableau.com/current/server/en-us/trusted_auth.htm" target="_blank"
-                rel="noopener noreferrer" class="dropdown-item">
-                <span>Hyper API</span>
-              </a>
-              <a href="https://help.tableau.com/current/server/en-us/saml.htm" target="_blank" rel="noopener noreferrer"
-                class="dropdown-item">
-                <span>Document API</span>
-              </a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              <span class="nav-link-inner--text">Data Security</span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right">
-              <div class="dropdown-header noti-title">
-                <h6 class="text-overflow m-0">Integration APIs</h6>
-              </div>
-              <a href="https://help.tableau.com/current/online/en-us/connected_apps.htm" target="_blank"
-                rel="noopener noreferrer" class="dropdown-item">
-                <span>JavaScript API</span>
-              </a>
-              <a href="https://help.tableau.com/current/online/en-us/connected_apps.htm" target="_blank"
-                rel="noopener noreferrer" class="dropdown-item">
-                <span>REST API</span>
-              </a>
-              <a href="https://help.tableau.com/current/server/en-us/connected_apps_eas.htm" target="_blank"
-                rel="noopener noreferrer" class="dropdown-item">
-                <span>Metadata API</span>
-              </a>
-              <a href="https://help.tableau.com/current/server/en-us/trusted_auth.htm" target="_blank"
-                rel="noopener noreferrer" class="dropdown-item">
-                <span>Hyper API</span>
-              </a>
-              <a href="https://help.tableau.com/current/server/en-us/saml.htm" target="_blank" rel="noopener noreferrer"
-                class="dropdown-item">
-                <span>Document API</span>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Main content -->
-  <div class="main-content">
-    <!-- Header -->
-    <div class="header py-7 py-lg-8 pt-lg-9">
+      </nav>
+<!-- Page Content-->
       <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
-              <div style="padding: 10px;">
-                <img class="card-img-top"
-                  src="./assets/tableau-app-retail.png"
-                  alt="Card image cap">
-                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
-                  <i class="fas fa-tags"></i>
-                </div>
-                <span class="badge badge-secondary" style="color: #26569A;">English</span>
-                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
-                <div class="card-body">
-                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
-                    ranging from executive overviews to point-of-sale metrics
-                  </p>
-                  <div style="text-align: center;">
-                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
-                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
-                        Launch Demo</button>
-                    </a>
+          <div id="grid" class="container">
+            <div class="card item" data-groups='["english", "consumer goods"]'>
+              <img class="card-img-top" src="./assets/portals/Scotts_restaurant.png" alt="Card image cap">
+              <div class="card-body">
+                  <h5 class="card-title text-primary">Scott's Restaurant (Consumer Goods)</h5>
+                  <h6 class="card-subtitle mt-2 mb-3">
+                      <i class="fas fa-tags tag-formatting"></i>
+                      <span class="badge rounded-pill bg-primary badge-formatting">English</span>
+                      <span class="badge rounded-pill bg-primary badge-formatting">Consumer Goods</span>
+                  </h6>
+                  <p class="card-text text-primary text-formatting">Boost supply chain agility, accelerate growth, and empower smarter decisions at scale.</p>
+                  <div class="button-formatting">
+                      <a href="#" target="_blank" class="btn btn-primary btn-sm btn-formatting">Launch Demo</a>
                   </div>
-                </div>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
-              <div style="padding: 10px;">
-                <img class="card-img-top"
-                  src="./assets/tableau-app-retail.png"
-                  alt="Card image cap">
-                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
-                  <i class="fas fa-tags"></i>
-                </div>
-                <span class="badge badge-secondary" style="color: #26569A;">English</span>
-                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
+            <div class="card item" data-groups='["english", "financial services"]'>
+                <img class="card-img-top" src="./assets/portals/Cumulus_Banking.png" alt="Card image cap">
                 <div class="card-body">
-                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
-                    ranging from executive overviews to point-of-sale metrics
-                  </p>
-                  <div style="text-align: center;">
-                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
-                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
-                        Launch Demo</button>
-                    </a>
-                  </div>
+                    <h5 class="card-title text-primary">Cumulus Bank (Financial Services)</h5>
+                    <h6 class="card-subtitle mt-2 mb-3">
+                        <i class="fas fa-tags tag-formatting"></i>
+                        <span class="badge rounded-pill bg-primary badge-formatting">English</span>
+                        <span class="badge rounded-pill bg-primary badge-formatting">Financial Services</span>
+                    </h6>
+                    <p class="card-text text-primary text-formatting">Track and analyze credit risk, asset management, equipment finance and monitor loans. </p>
+                    <div class="button-formatting">
+                        <a href="https://banking.embedded.tableau.com/login" target="_blank" class="btn btn-primary btn-sm btn-formatting">Launch Demo</a>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
-              <div style="padding: 10px;">
-                <img class="card-img-top"
-                  src="./assets/tableau-app-retail.png"
-                  alt="Card image cap">
-                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
-                  <i class="fas fa-tags"></i>
-                </div>
-                <span class="badge badge-secondary" style="color: #26569A;">English</span>
-                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
+            <div class="card item" data-groups='["english", "retail"]'>
+                <img class="card-img-top" src="./assets/portals/nto-fullsize.png" alt="Card image cap">
                 <div class="card-body">
-                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
-                    ranging from executive overviews to point-of-sale metrics
-                  </p>
-                  <div style="text-align: center;">
-                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
-                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
-                        Launch Demo</button>
-                    </a>
-                  </div>
+                    <h5 class="card-title text-primary">Northern Trail Outfitters (Retail)</h5>
+                    <h6 class="card-subtitle mt-2 mb-3">
+                        <i class="fas fa-tags tag-formatting"></i>
+                        <span class="badge rounded-pill bg-primary badge-formatting">English</span>
+                        <span class="badge rounded-pill bg-primary badge-formatting">Retail</span>
+                    </h6>
+                    <p class="card-text text-primary text-formatting">Boost supply chain agility, accelerate growth, and empower smarter decisions at scale.</p>
+                    <div class="button-formatting">
+                        <a href="https://nto.embedded.tableau.com/login" target="_blank" class="btn btn-primary btn-sm btn-formatting">Launch Demo</a>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
-              <div style="padding: 10px;">
-                <img class="card-img-top"
-                  src="./assets/tableau-app-retail.png"
-                  alt="Card image cap">
-                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
-                  <i class="fas fa-tags"></i>
-                </div>
-                <span class="badge badge-secondary" style="color: #26569A;">English</span>
-                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
+            <div class="card item" data-groups='["english", "retail"]'>
+                <img class="card-img-top" src="./assets/portals/Alpine_Retail.png" alt="Card image cap">
                 <div class="card-body">
-                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
-                    ranging from executive overviews to point-of-sale metrics
-                  </p>
-                  <div style="text-align: center;">
-                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
-                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
-                        Launch Demo</button>
-                    </a>
-                  </div>
+                    <h5 class="card-title text-primary">Alpine Group (Retail)</h5>
+                    <h6 class="card-subtitle mt-2 mb-3">
+                        <i class="fas fa-tags tag-formatting"></i>
+                        <span class="badge rounded-pill bg-primary badge-formatting">English</span>
+                        <span class="badge rounded-pill bg-primary badge-formatting">Retail</span>
+                    </h6>
+                    <p class="card-text text-primary text-formatting">Discover insights ranging from executive overviews to point-of-sale metrics.</p>
+                    <div class="button-formatting">
+                        <a href="https://retail.embedded.tableau.com/login" target="_blank" class="btn btn-primary btn-sm btn-formatting">Launch Demo</a>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
-              <div style="padding: 10px;">
-                <img class="card-img-top"
-                  src="./assets/tableau-app-retail.png"
-                  alt="Card image cap">
-                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
-                  <i class="fas fa-tags"></i>
-                </div>
-                <span class="badge badge-secondary" style="color: #26569A;">English</span>
-                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
+            <div class="card item" data-groups='["english", "media"]'>
+                <img class="card-img-top" src="./assets/portals/Welo_Media.png" alt="Card image cap">
                 <div class="card-body">
-                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
-                    ranging from executive overviews to point-of-sale metrics
-                  </p>
-                  <div style="text-align: center;">
-                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
-                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
-                        Launch Demo</button>
-                    </a>
-                  </div>
+                    <h5 class="card-title text-primary">Welo Media (Comms, Media, Tech)</h5>
+                    <h6 class="card-subtitle mt-2 mb-3">
+                        <i class="fas fa-tags tag-formatting"></i>
+                        <span class="badge rounded-pill bg-primary badge-formatting">English</span>
+                        <span class="badge rounded-pill bg-primary badge-formatting">Media Tech</span>
+                    </h6>
+                    <p class="card-text text-primary text-formatting">Explore patterns that emerge from user data and understand product trends to differentiate offerings.</p>
+                    <div class="button-formatting">
+                        <a href="https://media.embedded.tableau.com/login" target="_blank" class="btn btn-primary btn-sm btn-formatting">Launch Demo</a>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
-              <div style="padding: 10px;">
-                <img class="card-img-top"
-                  src="./assets/tableau-app-retail.png"
-                  alt="Card image cap">
-                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
-                  <i class="fas fa-tags"></i>
-                </div>
-                <span class="badge badge-secondary" style="color: #26569A;">English</span>
-                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
+            <div class="card item" data-groups='["english", "non-profit", "public"]'>
+                <img class="card-img-top" src="./assets/portals/Steps_NGO.png" alt="Card image cap">
                 <div class="card-body">
-                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
-                    ranging from executive overviews to point-of-sale metrics
-                  </p>
-                  <div style="text-align: center;">
-                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
-                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
-                        Launch Demo</button>
-                    </a>
-                  </div>
+                    <h5 class="card-title text-primary">STEPS (Non-Government Org)</h5>
+                    <h6 class="card-subtitle mt-2 mb-3">
+                        <i class="fas fa-tags tag-formatting"></i>
+                        <span class="badge rounded-pill bg-primary badge-formatting">English</span>
+                        <span class="badge rounded-pill bg-primary badge-formatting">Public</span>
+                    </h6>
+                    <p class="card-text text-primary text-formatting">Empowering society with data, resources, support, and a clear path to success.
+                    </p>
+                    <div class="button-formatting">
+                        <a href="https://ngo.embedded.tableau.com/login" target="_blank" class="btn btn-primary btn-sm btn-formatting">Launch Demo</a>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
-              <div style="padding: 10px;">
-                <img class="card-img-top"
-                  src="./assets/tableau-app-retail.png"
-                  alt="Card image cap">
-                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
-                  <i class="fas fa-tags"></i>
-                </div>
-                <span class="badge badge-secondary" style="color: #26569A;">English</span>
-                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
+            <div class="card item" data-groups='["english", "healthcare", "payer"]'>
+                <img class="card-img-top" src="./assets/portals/Makana_Payer.png" alt="Card image cap">
                 <div class="card-body">
-                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
-                    ranging from executive overviews to point-of-sale metrics
-                  </p>
-                  <div style="text-align: center;">
-                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
-                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
-                        Launch Demo</button>
-                    </a>
-                  </div>
+                    <h5 class="card-title text-primary">Makana Health (Healthcare)</h5>
+                    <h6 class="card-subtitle mt-2 mb-3">
+                        <i class="fas fa-tags tag-formatting"></i>
+                        <span class="badge rounded-pill bg-primary badge-formatting">English</span>
+                        <span class="badge rounded-pill bg-primary badge-formatting">Healthcare</span>
+                    </h6>
+                    <p class="card-text text-primary text-formatting">Transform member experience, improve operational agility, and help close the health equity gap.</p>
+                    <div class="button-formatting">
+                        <a href="https://payer.embedded.tableau.com/login" target="_blank" class="btn btn-primary btn-sm btn-formatting">Launch Demo</a>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
-              <div style="padding: 10px;">
-                <img class="card-img-top"
-                  src="./assets/tableau-app-retail.png"
-                  alt="Card image cap">
-                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
-                  <i class="fas fa-tags"></i>
-                </div>
-                <span class="badge badge-secondary" style="color: #26569A;">English</span>
-                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
-                <div class="card-body">
-                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
-                    ranging from executive overviews to point-of-sale metrics
-                  </p>
-                  <div style="text-align: center;">
-                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
-                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
-                        Launch Demo</button>
-                    </a>
+            <div class="card item" data-groups='["english", "healthcare", "life sciences"]'>
+              <img class="card-img-top" src="./assets/portals/coming-soon.jpg" alt="Card image cap">
+              <div class="card-body">
+                  <h5 class="card-title text-primary">Healthcare Life Sciences</h5>
+                  <h6 class="card-subtitle mt-2 mb-3">
+                      <i class="fas fa-tags tag-formatting"></i>
+                      <span class="badge rounded-pill bg-primary badge-formatting">English</span>
+                      <span class="badge rounded-pill bg-primary badge-formatting">Healthcare</span>
+                  </h6>
+                  <p class="card-text text-primary text-formatting">Coming Soon</p>
+                  <div class="button-formatting">
+                      <a href="https://healthcare.embedded.tableau.com/login" target="_blank" class="btn btn-primary btn-sm btn-formatting">Launch Demo</a>
                   </div>
-                </div>
               </div>
-            </div>
           </div>
-          <div class="col">
-            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
-              <div style="padding: 10px;">
-                <img class="card-img-top"
-                  src="./assets/tableau-app-retail.png"
-                  alt="Card image cap">
-                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
-                  <i class="fas fa-tags"></i>
+          <div class="card item" data-groups='["english", "financial", "wealth"]'>
+            <img class="card-img-top" src="./assets/portals/coming-soon.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title text-primary">Wealth Management</h5>
+                <h6 class="card-subtitle mt-2 mb-3">
+                    <i class="fas fa-tags tag-formatting"></i>
+                    <span class="badge rounded-pill bg-primary badge-formatting">English</span>
+                    <span class="badge rounded-pill bg-primary badge-formatting">Financial Services</span>
+                </h6>
+                <p class="card-text text-primary text-formatting">Coming Soon</p>
+                <div class="button-formatting">
+                    <a href="#" target="_blank" class="btn btn-primary btn-sm btn-formatting">Launch Demo</a>
                 </div>
-                <span class="badge badge-secondary" style="color: #26569A;">English</span>
-                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
-                <div class="card-body">
-                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
-                    ranging from executive overviews to point-of-sale metrics
-                  </p>
-                  <div style="text-align: center;">
-                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
-                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
-                        Launch Demo</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
-              <div style="padding: 10px;">
-                <img class="card-img-top"
-                  src="./assets/tableau-app-retail.png"
-                  alt="Card image cap">
-                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
-                  <i class="fas fa-tags"></i>
-                </div>
-                <span class="badge badge-secondary" style="color: #26569A;">English</span>
-                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
-                <div class="card-body">
-                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
-                    ranging from executive overviews to point-of-sale metrics
-                  </p>
-                  <div style="text-align: center;">
-                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
-                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
-                        Launch Demo</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
-              <div style="padding: 10px;">
-                <img class="card-img-top"
-                  src="./assets/tableau-app-retail.png"
-                  alt="Card image cap">
-                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
-                  <i class="fas fa-tags"></i>
-                </div>
-                <span class="badge badge-secondary" style="color: #26569A;">English</span>
-                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
-                <div class="card-body">
-                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
-                    ranging from executive overviews to point-of-sale metrics
-                  </p>
-                  <div style="text-align: center;">
-                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
-                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
-                        Launch Demo</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem; border-radius: 10px; box-shadow: 5px 5px 5px #6B8BBA;">
-              <div style="padding: 10px;">
-                <img class="card-img-top"
-                  src="./assets/tableau-app-retail.png"
-                  alt="Card image cap">
-                <div class="icon icon-xs icon-shape" style="margin-top: 10px !important; color: #7592BF;">
-                  <i class="fas fa-tags"></i>
-                </div>
-                <span class="badge badge-secondary" style="color: #26569A;">English</span>
-                <span class="badge badge-secondary" style="color: #26569A;">Retail</span>
-                <div class="card-body">
-                  <p style="margin: 0 auto; margin-bottom: 20px;" class="card-text">Discover insights
-                    ranging from executive overviews to point-of-sale metrics
-                  </p>
-                  <div style="text-align: center;">
-                    <a href="https://www.espn.com" target="_blank" rel="noopener noreferrer" class=" text-white">
-                      <button type="button" class="btn btn-sm" style="background-color: #E8762C; color:#F8F9FE;">
-                        Launch Demo</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
+        <div class="card item" data-groups='["english", "education"]'>
+          <img class="card-img-top" src="./assets/portals/coming-soon.jpg" alt="Card image cap">
+          <div class="card-body">
+              <h5 class="card-title text-primary">Education</h5>
+              <h6 class="card-subtitle mt-2 mb-3">
+                  <i class="fas fa-tags tag-formatting"></i>
+                  <span class="badge rounded-pill bg-primary badge-formatting">English</span>
+                  <span class="badge rounded-pill bg-primary badge-formatting">Education</span>
+              </h6>
+              <p class="card-text text-primary text-formatting">Coming Soon</p>
+              <div class="button-formatting">
+                  <a href="#" target="_blank" class="btn btn-primary btn-sm btn-formatting">Launch Demo</a>
+              </div>
+          </div>
       </div>
+      <!-- <div class="card item" data-groups='["english", "all"]'>
+        <img class="card-img-top" src="./assets/portals/coming-soon.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title text-primary">Coming Soon</h5>
+            <h6 class="card-subtitle mt-2 mb-3">
+                <i class="fas fa-tags tag-formatting"></i>
+                <span class="badge rounded-pill bg-primary badge-formatting">English</span>
+                <span class="badge rounded-pill bg-primary badge-formatting">Retail</span>
+            </h6>
+            <p class="card-text text-primary text-formatting">Discover insights ranging from executive overviews to point-of-sale metrics.</p>
+            <div class="button-formatting">
+                <a href="#" target="_blank" class="btn btn-primary btn-sm btn-formatting">Launch Demo</a>
+            </div>
+        </div>
+    </div> -->
+       
+        </div>
     </div>
-  </div>
-
-  <!-- Argon Scripts -->
-  <!-- Core -->
-  <script src="./assets/vendor/jquery/dist/jquery.min.js"></script>
-  <script src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Argon JS -->
-  <script src="./assets/js/argon.js?v=1.1.0"></script>
-
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./assets/shuffle/shuffle.min.js"></script>
+    <script src="./index.js"></script>
+</body 
 </html>
