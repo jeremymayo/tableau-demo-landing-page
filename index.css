@@ -28,7 +28,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
-    justify-content: flex-start;
+    justify-content: end;
 }
 
 .item {
@@ -69,11 +69,15 @@ body {
 
 .btn-formatting {
     font-family: 'Open Sans', sans-serif;
-
+    box-shadow: #000;
+    justify-content: end;
 }
 
 .button-formatting {
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: #000;
+    justify-content: end;
 
 }
 
@@ -87,5 +91,13 @@ body {
     width: 200px;
   }
 
+#modal-btn {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    justify-content: flex-end ;
+    box-shadow: 2px 2px 2px #000;
+    background-color: #26569A;
+    
+}
 
 /* .navbar-nav > li > .dropdown-menu > .hover { background-color: #FF0000; } */

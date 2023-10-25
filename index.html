@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Tableau Embedded Analytics</title>
-        <link rel="stylesheet" href="./index.css">
+        
         <!-- CUSTOMIZED BOOTSTRAP:  Leveraged sass to customize bootstrap v5.1.3
           sass scss/bootstrap/main.scss:css/main.css
           sass ./main.scss:./css/main.css -->
@@ -11,6 +11,9 @@
         <script src="https://kit.fontawesome.com/c20285b819.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
         <link rel="icon" href="./assets/tableau/tableau_favicon.png" type="image/png">
+
+        <!--Custom Stylesheet-->
+        <link rel="stylesheet" href="index.css">
     </head>
     <body style="padding-top: 100px;">
       <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" style="z-index: 1; background-image: linear-gradient(to bottom right,#26569A ,#94AACD);">
@@ -212,13 +215,10 @@
         </div>
       </nav>
         <!-- Page Content-->
-
-              <div class="container">
-                <div id="grid" class="container">
-                <div class="row" >
-                  <div class="col">
+        <div class="container">
+                <div class="row" style="margin-right: 100px;">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" id="modal-btn" class="btn btn-primary btn-sm btn-formatting" data-bs-toggle="modal" data-bs-target="#exampleModal">
                   Information
                 </button>
 
@@ -241,9 +241,10 @@
                   </div>
                 </div>  
               </div>
-            </div>
+          </div>
         <!--<div class="row">*DISCLAMER* For best results, please Launch Demo in an incognito window.</div>-->
-          
+        <div class="container">
+          <div id="grid" class="container">  
             <div class="card item" data-groups='["english", "consumer goods"]'>
               <img class="card-img-top" src="./assets/portals/Scotts_restaurant.png" alt="Card image cap">
               <div class="card-body">
